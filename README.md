@@ -12,7 +12,8 @@ Task 2: Complex Amplitudes
 Goal: Given a input of complex ampltiudes [a00, a01, a10, a11] corresponding to $\psi = a00|00> + a01|01> + a10|10> + a11|11>$, normalize and implement the routine that would prepare this 2-qubit state.
 
 Input: Complex ampltiudes [a00, a01, a10, a11]
-Output: Routine to prepare this state
+Output: Routine to prepare this state saved as a image to the same location as the code.
+Requirements: Used python 3.9, run the code with python3 quantum_circuit.py, run the test cases with python3 -m pytest or pytest test_quantum_circuit.py
 
 Theory:
 
@@ -55,9 +56,9 @@ $\phi_{11} = \gamma_11 - \gamma_01 - \gamma_10 + \gamma_00$
 
 $\phi_{10}$ is applied on the first qubit with a Rz gate so it will apply when qubit 1 = 1
 
-$\phi_{01} is applied on the second quibt with an anti-control Rz gate because we want it to apply when qubit 1 = 0 and qubit 2 = 1.
+$\phi_{01}$ is applied on the second quibt with an anti-control Rz gate because we want it to apply when qubit 1 = 0 and qubit 2 = 1.
 
-$\phi_{11} is applied on the second qubit with a control Rz gate because we want it to apply when qubit 1 = 1 and qubit 2 = 1.
+$\phi_{11}$ is applied on the second qubit with a control Rz gate because we want it to apply when qubit 1 = 1 and qubit 2 = 1.
 
 
 
