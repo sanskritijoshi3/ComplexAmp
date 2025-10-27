@@ -1,0 +1,6 @@
+pytest
+numpy
+qiskit
+math
+matplotlib
+pylatexenc
