@@ -20,6 +20,10 @@ For any wavefunction $\psi = a00|00> + a01|01> + a10|10> + a11|11>$, |a00|^2 + |
 
 Step 2: Create the routine to set the magnitudes
 
-Focusing on the real part, using Ry gates for 2-qubits, we can use an Ry gate, and anti-control 
+Focusing on the real part, using Ry gates for 2-qubits, we can use an Ry gate, and anti-control and control Ry gates.
+
+Using Fig. 1 from the Pennylane blog, we know that at |$\psi_0$> = |00>.
+At $|\psi_1> = Ry|0> \otimes |0> = cos(\theta/2)|00> + 0|01> + sin(\theta/2)|10> + 0|11>.
+At $|\psi_2> = anti
 
 
