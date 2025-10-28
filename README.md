@@ -30,11 +30,11 @@ The anti-control Ry gate (ACRy) is represented by: $Ry \otimes ∣0⟩⟨0∣+ I
 
 Using Fig. 1 from the Pennylane blog, we know that at |$\psi_0$> = |00>.
 
-At $|\psi_1> = Ry|0> \otimes |0> = cos(\theta/2)|00> + 0|01> + sin(\theta/2)|10> + 0|11>.
+At $|\psi_1> = Ry(\theta)|0> \otimes |0> = cos(\theta/2)|00> + 0|01> + sin(\theta/2)|10> + 0|11>.
 
-At $|\psi_2> = ACRy |\psi_1> = $
+At $|\psi_2> = ACRy(\theta_0)|\psi_1> = cos(\theta/2)cos(\theta_0/2)|00> + cos(\theta/2)sin(\theta_0/2)|01> + sin(\theta/2)|10> + 0|11> $
 
-At $|\psi_3> = CRy |\psi_2> = $
+At $|\psi_3> = CRy |\psi_2> = cos(\theta/2)cos(\theta_0/2)|00> + cos(\theta/2)sin(\theta_0/2)|01> + sin(\theta/2)cos(\theta_0/2)|10> + sin(\theta/2)sin(\theta_0/2)|11>$
 
 Therefore, we can calculate $\theta = 2arccos\sqrt{|a00|^{2} + |a01|^{2}}$, $\theta_0 = \sqrt{\frac{|a00|^{2}}{|a00|^{2} + |a01|^{2}}}$, $\theta_1 = \sqrt{\frac{|a10|^{2}}{|a10|^{2} + |a11|^{2}}}$.
 
@@ -48,11 +48,11 @@ We can say that the phase $\gamma_{00}$ is the relative phase of the circuit, th
 
 For the gates then, we need to apply 3 different gates for each ampltitude's phase:
 
-$\phi_{01} = \gamma_01 - \gamma_00$
+$\phi_{01} = \gamma_{01} - \gamma_{00}$
 
-$\phi_{10} = \gamma_10 - \gamma_00$
+$\phi_{10} = \gamma_{10} - \gamma_{00}$
 
-$\phi_{11} = \gamma_11 - \gamma_01 - \gamma_10 + \gamma_00$
+$\phi_{11} = \gamma_{11} - \gamma_{01} - \gamma_{10} + \gamma_{00}$
 
 $\phi_{10}$ is applied on the first qubit with a Rz gate so it will apply when qubit 1 = 1
 
